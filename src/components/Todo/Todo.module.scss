@@ -1,0 +1,32 @@
+.Todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 60%;
+  margin-bottom: 1rem;
+}
+
+.Item{
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.Content {
+  display: inline-block;
+  margin-left: 10px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: .2;
+
+  &_pending {
+    color: #1976d2;
+  }
+
+  &_success {
+    color: #454749;
+    text-decoration: line-through;
+  }
+
+}

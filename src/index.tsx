@@ -4,8 +4,7 @@ import App from './App'
 
 import './index.scss'
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLDivElement)
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLDivElement)
 root.render(
   <React.StrictMode>
     <App />

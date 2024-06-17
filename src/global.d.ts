@@ -1,3 +1,4 @@
+declare module "uuid"
 declare module "*.png"
 declare module "*.svg"
 declare module "*.scss"

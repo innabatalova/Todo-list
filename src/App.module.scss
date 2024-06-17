@@ -1,4 +1,10 @@
 .App {
-  background-color: red;
-}
+  max-width: 85rem;
+  padding: 5rem .5rem;
+  margin: auto;
+  text-align: center;
 
+  @media screen and (max-width: 740px) {
+    flex-direction: column;
+  }
+}
