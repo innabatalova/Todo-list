@@ -38,7 +38,7 @@ const AddTodo: FC<IProps> = ({ getTodos }): ReactElement => {
 
   return (
     <div className={styles.AddTodo}>
-      <TextField variant="outlined" sx={AddTodoStyle} onChange={changeValueInput} value={valueInput} />
+      <TextField variant="outlined" sx={AddTodoStyle} onChange={changeValueInput} value={valueInput} placeholder='Create a you todo' />
       <Button variant="contained" sx={AddTodoButtonStyle} onClick={addedTodo}>
         Add Todo
       </Button>

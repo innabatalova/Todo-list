@@ -1,7 +1,17 @@
 .AddTodo {
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  max-width: 70%;
   padding-left: 3rem;
+
+  @media screen and (max-width: 769px) {
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-end: 3;
+    flex-direction: column;
+    padding-left: 0;
+  }
 }

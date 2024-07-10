@@ -1,4 +1,4 @@
-import { FC, ReactElement, useState } from 'react'
+import { FC, ReactElement, useState, useEffect } from 'react'
 import { LibraryAddCheck, CheckBoxOutlineBlank, Delete } from '@mui/icons-material'
 
 import styles from './Todo.module.scss'
@@ -18,6 +18,10 @@ interface IProps {
 const Todo: FC<IProps> = ({ todo, deleteTodo }): ReactElement => {
   const [statusTodo, setStatusTodo] = useState(todo.status)
 
+  useEffect(() => {
+    todo.status = statusTodo
+  }, [statusTodo])
+
   const toogleStatusTodo = () => {
     statusTodo === 'success' ? setStatusTodo('pending') : setStatusTodo('success')
   }
@@ -31,8 +35,8 @@ const Todo: FC<IProps> = ({ todo, deleteTodo }): ReactElement => {
       <li className={styles.Item} onClick={toogleStatusTodo}>
         {statusTodo === 'success' ? <LibraryAddCheck color="primary" /> : <CheckBoxOutlineBlank color="primary" />}
         <span className={styles.Content + ' ' + (statusTodo === 'success' ? styles.Content_success : styles.Content_pending)}>{todo.content}</span>
+        <Delete color="error" sx={TodoStyle} onClick={deletedTodo} />
       </li>
-      <Delete color="error" sx={TodoStyle} onClick={deletedTodo} />
     </div>
   )
 }
